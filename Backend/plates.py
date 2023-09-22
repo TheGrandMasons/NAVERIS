@@ -16,6 +16,3 @@ plates = (
     "Scotia",
     "South American"
 )
-plate = input("Enter a plate: ")
-if plate in plates:
-    print("True")
