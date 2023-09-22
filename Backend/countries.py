@@ -10,10 +10,13 @@ class country:
 
     def __str__(self):
         return f"Country: {self.name}\nLongitude: {self.longitude}\nLatitude: {self.latitude}\nWindspeed: {self.windspeed}\nWind Direction: {self.wind_direction}\nTectonic Plate: {self.tectonic_plate}"
-    
+
+
 # Countries
 eg = country("Egypt", "Cairo", 26.820553, 30.802498, 0, 0, "Arabian")
-    # reate a list of countries
+
+
+# List of countries
 countriesList = {
     eg
     # Add more countries here...
