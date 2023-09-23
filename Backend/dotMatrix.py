@@ -1,3 +1,6 @@
+import requests
+import json
+
 class Dot:
     def __init__(self, id, latitude, longitude, windspeed, wind_direction, pressure):
         self.id = id
@@ -12,16 +15,33 @@ class Dot:
 dots = []
 startingLatitude = float(input("Enter starting latitude: ")) * 2
 startingLongitude = float(input("Enter starting longitude: ")) * 2
-windspeed = 10 # Placeholder
-wind_direction = 45 # Placeholder
-pressure = 1000 # Placeholder
 
-for lat1 in range(int(startingLatitude), int(startingLatitude) + 20):
-    for long1 in range(int(startingLongitude), int(startingLongitude) + 20):
+for lat1 in range(int(startingLatitude), int(startingLatitude) + 5):
+    for long1 in range(int(startingLongitude), int(startingLongitude) + 2):
         dotID = len(dots) + 1
-        new_dot = Dot(dotID, lat1/2, long1/2, windspeed, wind_direction, pressure)
-        dots.append(new_dot)
+        # Requests Constants.
+        lon = long1/2
+        lat = lat1/2
+        def Status(lon, lat):
+            # Requests Constants.
+            API_Key = "77df8ee93034bedcbe6b96b0f9eb9f0a"
+            url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API_Key}"
+            # Sending Req.
+            response = requests.get(url)
+            # Get The Response With Json Format
+            res = response.json()
 
-# Now you can access each dot by its index in the list
+            if res["cod"] != "404":
+                #data = res['main']
+                live_wind_speed = res["wind"]["speed"]
+                live_pressure = res["main"]["pressure"]
+                live_wind_degree = res["wind"]["deg"]
+                new_dot = Dot(dotID, lat1/2, long1/2, live_wind_speed, live_wind_degree, live_pressure)
+                dots.append(new_dot)
+            else:
+                return "Error While Fetching The Response Of API Request."
+        Status(lat,lon)
+
+# Print the dot matrix.
 # for dot in dots:
 #     print(dot)
