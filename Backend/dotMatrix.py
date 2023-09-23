@@ -30,7 +30,7 @@ for lat1 in range(int(startingLatitude), int(startingLatitude) + 20):
             url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API_Key}"
             # Sending Req.
             response = requests.get(url)
-            # Get The Response With Json Format
+            # Get The Response With Json Format.
             res = response.json()
 
             if res["cod"] != "404":
@@ -46,4 +46,5 @@ for lat1 in range(int(startingLatitude), int(startingLatitude) + 20):
 
 # Print the dot matrix.
 # for dot in dots:
-#     print(dot.matrix)
+#     if dot.id == 1:
+#         print(dot.matrix)
