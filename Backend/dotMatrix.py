@@ -9,7 +9,7 @@ class Dot:
         self.wind = (windspeed, int(wind_direction))
         self.pressure = int(pressure)
         self.matrix = (windspeed, int(wind_direction), int(pressure))
-        self.data = (id, latitude, longitude, windspeed, wind_direction, pressure)
+        self.data = (id, latitude, longitude, windspeed, int(wind_direction), int(pressure))
 
     def __str__(self):
         return f"(ID: {self.id}, Latitude: {self.lat}, Longitude: {self.long}, Wind Speed: {self.wind[0]}, Wind Direction: {self.wind[1]}, Pressure: {self.pressure})"
