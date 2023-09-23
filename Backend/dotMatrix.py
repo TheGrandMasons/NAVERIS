@@ -9,6 +9,7 @@ class Dot:
         self.wind = (windspeed, int(wind_direction))
         self.pressure = int(pressure)
         self.matrix = (windspeed, int(wind_direction), int(pressure))
+        self.data = (id, latitude, longitude, windspeed, wind_direction, pressure)
 
     def __str__(self):
         return f"(ID: {self.id}, Latitude: {self.lat}, Longitude: {self.long}, Wind Speed: {self.wind[0]}, Wind Direction: {self.wind[1]}, Pressure: {self.pressure})"
@@ -17,7 +18,7 @@ dots = []
 startingLatitude = float(input("Enter starting latitude: ")) * 2
 startingLongitude = float(input("Enter starting longitude: ")) * 2
 
-for lat1 in range(int(startingLatitude), int(startingLatitude) + 20):
+for lat1 in range(int(startingLatitude), int(startingLatitude) + 20): 
     for long1 in range(int(startingLongitude), int(startingLongitude) + 20):
         dotID = len(dots) + 1
         # Requests Constants.
