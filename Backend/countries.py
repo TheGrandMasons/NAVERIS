@@ -4,7 +4,7 @@ class country:
         self.cap = capital
         self.lat = latitude
         self.long = longitude
-        self.cord = (round(self.lat,2), round(self.long,2))
+        self.coords = (round(self.lat,2), round(self.long,2))
         self.wind = (windspeed, int(wind_direction))
         self.plate = tectonic_plate
 
