@@ -9,15 +9,17 @@ class country:
         self.plate = tectonic_plate
 
     def __str__(self):
-        return f"Country: {self.name}\nLongitude: {self.longitude}\nLatitude: {self.latitude}\nWindspeed: {self.windspeed}\nWind Direction: {self.wind_direction}\nTectonic Plate: {self.tectonic_plate}"
+        return f"Country: {self.name}\nCapital: {self.cap}\nLatitude: {self.lat}\nLongitude: {self.long}\nWindspeed: {self.wind[0]}\nWind Direction: {self.wind[1]}\nTectonic Plate: {self.plate}"
 
 
 # Countries
 eg = country("Egypt", "Cairo", 26.820553, 30.802498, 0, 0, "Arabian")
+us = country("United States", "Washington", 37.09024, -95.712891, 0, 0, "North American")
 
 
 # List of countries
-countriesList = {
-    eg
+countriesList = [
+    eg,
+    us
     # Add more countries here...
-}
+]

@@ -46,5 +46,4 @@ for lat1 in range(int(startingLatitude), int(startingLatitude) + 20):
 
 # Print the dot matrix.
 # for dot in dots:
-#     if dot.id == 1:
-#         print(dot.matrix)
+#     print(dot.data)
