@@ -1,8 +1,9 @@
 import requests
 import json
+import time
 
 class Dot:
-    def __init__(self, id, latitude, longitude, windspeed, wind_direction, pressure):
+    def __init__(self, id, latitude, longitude, windspeed, wind_direction, pressure, time):
         self.id = id
         self.lat = latitude
         self.long = longitude
@@ -10,40 +11,79 @@ class Dot:
         self.pressure = int(pressure)
         self.matrix = (windspeed, int(wind_direction), int(pressure))
         self.data = (id, latitude, longitude, windspeed, int(wind_direction), int(pressure))
+        self.time = time
 
     def __str__(self):
-        return f"(ID: {self.id}, Latitude: {self.lat}, Longitude: {self.long}, Wind Speed: {self.wind[0]}, Wind Direction: {self.wind[1]}, Pressure: {self.pressure})"
+        return f"(ID: {self.id}, Latitude: {self.lat}, Longitude: {self.long}, Wind Speed: {self.wind[0]}, Wind Direction: {self.wind[1]}, Pressure: {self.pressure}, Time: {self.time})"
 
+def Status(lon, lat):
+    API_Key = "77df8ee93034bedcbe6b96b0f9eb9f0a"
+    url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API_Key}"
+
+    response = requests.get(url)
+    res = response.json()
+    #print(res)
+    if res["cod"] != "404":
+        # Extract data from res (output data from the api).
+        speed = res['wind']['speed'] * 3.6
+        deg = res['wind']['deg']
+        pres = res['main']['pressure']
+        return speed, deg, pres
+    else:
+        return "Error While Fetching The Response Of API Request."
+
+deg_matrix = []
+speed_matrix = []
+pres_matrix = []
 dots = []
-startingLatitude = float(input("Enter starting latitude: ")) * 2
-startingLongitude = float(input("Enter starting longitude: ")) * 2
+def makeDots(latf, lonf, range, resolution):
+    global deg_matrix
+    global speed_matrix
+    global pres_matrix
+    global dots
+    startingLatitude = float(latf) # float(input("Enter starting latitude: "))
+    startingLongitude = float(lonf) # float(input("Enter starting longitude: "))
 
-for lat1 in range(int(startingLatitude), int(startingLatitude) + 20): 
-    for long1 in range(int(startingLongitude), int(startingLongitude) + 20):
-        dotID = len(dots) + 1
-        # Requests Constants.
-        lon = long1/2
-        lat = lat1/2
-        def Status(lon, lat):
-            # Requests Constants.
-            API_Key = "77df8ee93034bedcbe6b96b0f9eb9f0a"
-            url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API_Key}"
-            # Sending Req.
-            response = requests.get(url)
-            # Get The Response With Json Format.
-            res = response.json()
+    nlat = startingLatitude
+    stopping_lat = startingLatitude + range
+    stopping_lon = startingLongitude + range
+    loop = 1
+    while startingLatitude < stopping_lat:
+        
+        # nlon is a placeholder for the starting lon.
+        nlon = startingLongitude
+        deg_matrix_in = []
+        speed_matrix_in = []
+        pres_matrix_in = []
+        while nlon < stopping_lon:
 
-            if res["cod"] != "404":
-                #data = res['main']
-                live_wind_speed = res["wind"]["speed"]
-                live_pressure = res["main"]["pressure"]
-                live_wind_degree = res["wind"]["deg"]
-                new_dot = Dot(dotID, lat1/2, long1/2, live_wind_speed, live_wind_degree, live_pressure)
-                dots.append(new_dot)
-            else:
-                return "Error While Fetching The Response Of API Request."
-        Status(lat,lon)
+            # Get the current speed, degree and pressure.
+            speed, deg, pres = Status(startingLatitude,nlon)
+            nlon = nlon + resolution
 
-# Print the dot matrix.
-# for dot in dots:
-#     print(dot.data)
+            # Objectify the dot.
+            dotID = len(dots) + 1
+            current_time = time.strftime("%H:%M:%S", time.localtime())
+            new_dot = Dot(dotID, startingLatitude, nlon, speed, deg, pres, current_time)
+            dots.append(new_dot)
+            
+            # Append the data to the inner matrix.
+            deg_matrix_in.append(deg)
+            speed_matrix_in.append(speed)
+            pres_matrix_in.append(pres)
+
+        # Append the appeneded data to the main matrix.
+        deg_matrix.append(deg_matrix_in)
+        speed_matrix.append(speed_matrix_in)
+        pres_matrix.append(pres_matrix_in)
+
+        startingLatitude = startingLatitude + resolution
+        print('Gathating Data', loop, 'of', int(range/resolution))
+        loop = loop + 1
+    print("Gathered Data Done.")
+    return deg_matrix, speed_matrix, pres_matrix
+
+# print('____DEGREE_____')
+# print(deg_matrix)
+# print('____SPEED_____')
+# print(speed_matrix)
