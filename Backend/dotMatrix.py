@@ -18,13 +18,13 @@ class Dot:
     def __str__(self):
         return f"[ID: {self.id}, Latitude: {self.lat}, Longitude: {self.long}, Wind Speed: {self.wind[0]}, Wind Direction: {self.wind[1]}, Pressure: {self.pressure}, Time: {self.time}]"
 
-def Status(lon, lat):
+def Status(lat, lon):
     API_Key = "77df8ee93034bedcbe6b96b0f9eb9f0a"
     url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API_Key}"
 
     response = requests.get(url)
     res = response.json()
-    #print(res)
+    # print(res)
     if res["cod"] != "404":
         # Extract data from res (output data from the api).
         speed = res['wind']['speed'] * 3.6
