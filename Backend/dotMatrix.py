@@ -39,7 +39,7 @@ speed_matrix = []
 pres_matrix = []
 dots = []
 def makeDots(latf, lonf, range, resolution):
-    f = open("dotMatrix.json", "a")
+    f = open("dotMatrix.json", "w")
     f.write("[\n")
     global deg_matrix
     global speed_matrix
