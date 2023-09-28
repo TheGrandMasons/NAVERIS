@@ -49,10 +49,10 @@ def makeDots(latf, lonf, range, resolution):
     startingLongitude = float(lonf) # float(input("Enter starting longitude: "))
 
     nlat = startingLatitude
-    stopping_lat = startingLatitude + range
+    stopping_lat = startingLatitude - range
     stopping_lon = startingLongitude + range
     loop = 1
-    while startingLatitude < stopping_lat:
+    while startingLatitude > stopping_lat:
         
         # nlon is a placeholder for the starting lon.
         nlon = startingLongitude
@@ -86,7 +86,7 @@ def makeDots(latf, lonf, range, resolution):
         speed_matrix.append(speed_matrix_in)
         pres_matrix.append(pres_matrix_in)
 
-        startingLatitude = startingLatitude + resolution
+        startingLatitude = startingLatitude - resolution
         print('Gathating Data', loop, 'of', int(range/resolution))
         loop = loop + 1
     print("Gathered Data Done.")
