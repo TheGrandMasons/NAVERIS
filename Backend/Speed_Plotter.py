@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from dotMatrix import *
 
-wind_speeds = np.array()  # replace with your actual data
+wind_speeds = np.array(speed_matrix)  # replace with your actual data
 
 # Create a contour plot
 plt.figure(figsize=(10, 8))
