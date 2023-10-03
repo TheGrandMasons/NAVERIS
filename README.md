@@ -37,4 +37,5 @@
   </tr>
 </table>
 
-```print("hi")```
+```python
+print("hi")```
