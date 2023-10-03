@@ -37,6 +37,5 @@
   </tr>
 </table>
 <br>
-# CODING TALK
+<h1>CODING TALK</h1>
 
-<h2>Dot Matrix Generator</h2>
