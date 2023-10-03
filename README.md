@@ -6,7 +6,7 @@
   
   
   <div>
-   <table width="100%" height="100%" align="center" valign="center">
+   <table width="100%" height="100%" align="left" valign="center">
    <tr><td>
       <li>Earthquakes </li>
    </td>
