@@ -44,7 +44,6 @@
 <br>
 ```python
 {"id": "1", "lat": "46.2102", "lon": "-38.8989", "ws": "43.38", "wd": "319", "ap": "1010"}
-# Snippet From JSON Data file
 ```
 
 
