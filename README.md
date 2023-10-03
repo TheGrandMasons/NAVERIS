@@ -1,6 +1,6 @@
 # NAVERIS
 <style>
-.vl {
+.svl {
   border-left: 6px solid green;
   height: 500px;
 }
