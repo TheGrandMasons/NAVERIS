@@ -1,5 +1,5 @@
 # NAVERIS
-<link rel="stylesheet" type="text/css" href="fancy/rm.css">
+<link rel="stylesheet" type="text/css" href="rm.css">
 <h3 align="center">A project related to "Nasa Space Apps Cairo 2023" Hackthon 🎓</h3>
 
 <h4>This project fully made to work as an early warning of natrual diseaters like :-</h4>
