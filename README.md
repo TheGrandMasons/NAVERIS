@@ -36,6 +36,6 @@
     </tr>
   </tr>
 </table>
-
+<br>
 # CODING TALK
-
+<h1>Dot Matrix Generator</h1>
