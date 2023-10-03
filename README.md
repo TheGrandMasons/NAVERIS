@@ -8,12 +8,15 @@
     <td>
       Earthquakes
     </td>
+    <tr>
     <td>
       Storms
     </td>
+    <tr>
     <td>
       Tornado
     </td>
+    </tr>
   </tr>
 </table>
 
