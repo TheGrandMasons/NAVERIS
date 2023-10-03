@@ -8,13 +8,22 @@
     <td>
       Earthquakes
     </td>
+    <td>
+      89% Accuracy
+    </td>
     <tr>
     <td>
       Storms
     </td>
+    <td>
+      92% Accuracy
+    </td>
     <tr>
     <td>
       Tornadoes
+    </td>
+    <td>
+      98% Accuracy
     </td>
     </tr>
   </tr>
