@@ -41,7 +41,7 @@
 
 - Dot Matrix Generator Is a source that generate a longtidue and latitude dots with It's actual pressure, wind speed, and wind direction as json file
 
-<span style="font-size:"10px"">Snippet from JSON data file :-</span>
+<span style="font-size:"10px">Snippet from JSON data file :-</span>
 ```JSON
 {
 	"id": "1",
