@@ -51,6 +51,6 @@
 	"ap": "1010"
 }
 ```
-<h5>Snippet from data JSON file.</h5>
+Snippet from data JSON file.
 
 
