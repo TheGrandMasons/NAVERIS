@@ -6,24 +6,32 @@
 <table width="150">
   <tr>
     <td>
+      Disease
+    </td>
+    <td>
+    Accuracy level
+    </td>
+  </tr>
+  <tr>
+    <td>
       Earthquakes
     </td>
     <td>
-      89% Accuracy
+      90%
     </td>
     <tr>
     <td>
       Storms
     </td>
     <td>
-      92% Accuracy
+      97%
     </td>
     <tr>
     <td>
       Tornadoes
     </td>
     <td>
-      98% Accuracy
+      99%
     </td>
     </tr>
   </tr>
