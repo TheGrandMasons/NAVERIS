@@ -40,7 +40,7 @@
 <h1>CODING TALK</h1>
 
 <h3>Dot Matrix Generator</h3>
-<li>"Dot Matrix Generator" Is a source that generate a longtidue and latitude dots with It's actual pressure, wind speed, and wind direction as json file</li>
-### DATA FILE JSON SNIPPET 
+"Dot Matrix Generator" Is a source that generate a longtidue and latitude dots with It's actual pressure, wind speed, and wind direction as json file
+## DATA FILE JSON SNIPPET 
 
 
