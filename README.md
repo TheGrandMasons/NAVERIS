@@ -39,7 +39,7 @@
 <h1>MAPPING WITH DOTMATRIX</h1>
 <h3>Dot Matrix Generator</h3>
 
-- Dot Matrix Generator Is a source that generate a longtidue and latitude map dots with It's actual pressure, wind speed, and wind direction as json file
+- Dot Matrix Generator is a source that generates a longtidue and latitude map dots with its actual pressure, wind speed, and wind direction as a JSON file
 
 <font size="-3">Snippet from JSON data file :-</font>
 ```JSON
