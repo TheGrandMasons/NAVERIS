@@ -5,7 +5,7 @@
 <table >
   <tr>
     <td>
-      Disease
+      Disaster
     </td>
     <td>
     Accuracy level
