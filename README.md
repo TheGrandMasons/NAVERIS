@@ -53,7 +53,8 @@
 }
 ```
 
-- You can see more data like this at [dotMatrix.json]https://github.com/TheGrandMasons/NAVERIS/blob/main/dotMatrix.json
+- You can see more data like this at dotMatrix.json
+
 
 
 
