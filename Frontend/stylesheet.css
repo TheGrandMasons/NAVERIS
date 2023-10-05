@@ -138,7 +138,7 @@ section {
   font-size: 26px;
 }
 .container #mapSection {
-  background-image: url("Images/bg.jpg");
+  background-image: url("Images/bg.png");
   background-size: cover;
   display: none;
   background-color: rgb(0, 0, 0);
