@@ -188,8 +188,14 @@ section{
 }
     #alertBox { 
       margin-top: 10vh;
-      display: none;
-      position: relative; 
+      display: block;
+      position: relative;
+      background : rgba(206, 213, 194, 0.2); 
+      backdrop-filter : blur(6.9px);
+      border-Radius : 10px;
+      width : 300px;
+      padding :20px;
+      box-shadow : 0 4px 6px rgba(0, 0, 0, 0.1);
 
         h1 {
           color: rgb(221, 26, 26);
