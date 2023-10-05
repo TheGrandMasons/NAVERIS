@@ -9,21 +9,11 @@ class country:
         self.plate = tectonic_plate
 
     def __str__(self):
-<<<<<<< HEAD
         return f"Country: {self.name}\nCaptial: {self.cap}\nLongitude: {self.long}\nLatitude: {self.lat}\nWindspeed: {self.wind[0]}\nWind Direction: {self.wind[1]}\nTectonic Plate: {self.plate}"
 
 
 # Countries
 # eg = country("", "", , , 0, 0, "")
-=======
-        return f"Country: {self.name}\nCapital: {self.cap}\nLatitude: {self.lat}\nLongitude: {self.long}\nWindspeed: {self.wind[0]}\nWind Direction: {self.wind[1]}\nTectonic Plate: {self.plate}"
-
-
-# Countries
-eg = country("Egypt", "Cairo", 26.820553, 30.802498, 0, 0, "Arabian")
-us = country("United States", "Washington", 37.09024, -95.712891, 0, 0, "North American")
->>>>>>> 3ab4be66f23a0734ae766e0af8b03512c3c40eb7
-
 AD = country('Andora','Andorra la Vella',42.546245,1.601554,0,0,'African')
 AE = country('United Arab Emirates','Abu Dhabi',23.424076,53.847818,0,0,'Arabian')
 AF = country("Afghanistan", "Cairo", 33.93911,67.709953, 0, 0, "African")
@@ -122,7 +112,6 @@ HN = country("Honduras", "Tegucigalpa", 15.199999,-86.241905 , 0, 0, "Caribbean"
 HR = country("Croatia", "Zagreb", 45.1, 15.2, 0, 0, "Eurasian")
 HT = country("Haiti", "Port-au-Prince", 18.971187, -72.285215, 0, 0, "Caribbean")
 HU = country("Hungary", "Budapest",47.162494 , 19.503304, 0, 0, "Eurasian")
-
 ID = country("Indonesia", "Jakarta",-0.789275 ,113.921327 , 0, 0, "Eurasian")
 IE = country("Ireland", "Dublin",53.41291 , -8.24389, 0, 0, "Eurasian")
 IL = country("Palestine", "Jerusalem",31.046051 , 34.851612, 0, 0, "Arabian")
@@ -224,7 +213,6 @@ SK = country("Slovakia", "Bratislava",48.669026 ,19.699024 , 0, 0, "Eurasian")
 SL = country("Sierra Leone", "Freetown", 8.460555, -11.779889, 0, 0, "African")
 SM = country("San Marino", "San Marino",43.94236 ,12.457777 , 0, 0, "Eurasian")
 SN = country("Senegal", "Dakar", 14.497401, -14.452362, 0, 0, "African")
-
 SO = country("Somalia", "Mogadishu",5.152149 , 46.199616, 0, 0, "Somali")
 SR = country("Suriname", "Paramaribo",3.919305 ,-56.027783, 0, 0, "South American")
 ST = country("São Tomé and Príncipe", "São Tomé",0.18636 , 6.613081, 0, 0, "African")
