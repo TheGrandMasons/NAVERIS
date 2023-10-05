@@ -12,8 +12,9 @@ class Dot:
         self.pressure = int(pressure)
         self.matrix = (windspeed, int(wind_direction), int(pressure))
         self.data = (id, latitude, longitude, windspeed, int(wind_direction), int(pressure))
-        self.dataForJSON = f'[\n\t"id": "{id}",\n\t"lat": "{latitude}",\n\t"lon": "{longitude}",\n\t"ws": "{round(windspeed,2)}",\n\t"wd": "{int(wind_direction)}",\n\t"ap": "{int(pressure)}"\n\t"tm": "{time}"\n]'
+        self.dataForJSON = f'[\n\t"id": "{id}",\n\t"lat": "{latitude}",\n\t"lon": "{longitude}",\n\t"ws": "{round(windspeed,2)}",\n\t"wd": "{int(wind_direction)}",\n\t"ap": "{int(pressure)}",\n\t"tm": "{time}"\n]'
         self.time = time
+        self.dataModel = f'{windspeed},{wind_direction},{pressure},''
 
     def __str__(self):
         return f"[ID: {self.id}, Latitude: {self.lat}, Longitude: {self.long}, Wind Speed: {self.wind[0]}, Wind Direction: {self.wind[1]}, Pressure: {self.pressure}, Time: {self.time}]"
