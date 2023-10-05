@@ -30,6 +30,17 @@
   font-weight: normal;
   src: local("Unity Sans Semibold"), url("Fonts/Unity-Sans-SemiBold.woff2") format("woff2");
 }
+@-webkit-keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25%, 75% {
+    transform: translateY(-3px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+}
 @keyframes float {
   0%, 100% {
     transform: translateY(0);
@@ -39,6 +50,26 @@
   }
   50% {
     transform: translateY(0);
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  20% {
+    opacity: 20%;
+  }
+  40% {
+    opacity: 40%;
+  }
+  60% {
+    opacity: 60%;
+  }
+  80% {
+    opacity: 80%;
+  }
+  100% {
+    opacity: 100%;
   }
 }
 @keyframes fadeIn {
@@ -160,7 +191,8 @@ section {
 }
 .container #mapSection .button-container button {
   font-size: 21px;
-  animation: fadeIn 0.69s ease-in;
+  -webkit-animation: fadeIn 0.69s ease-in;
+          animation: fadeIn 0.69s ease-in;
   font-family: Monolisa Book;
   margin-bottom: 2vh;
   cursor: pointer;
@@ -173,6 +205,7 @@ section {
   font-size: 24px;
 }
 .container #mapSection #alertBox {
+  flex-direction: column;
   display: none;
   z-index: 1;
 }
@@ -206,4 +239,5 @@ section {
   border-radius: 5px;
   display: none;
   z-index: 2;
-}/*# sourceMappingURL=stylesheet.css.map */
+}
+/*# sourceMappingURL=stylesheet.css.map */

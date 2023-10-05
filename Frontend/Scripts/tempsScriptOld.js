@@ -14,7 +14,7 @@ async function fetchTemperatureData(capitalCity) {
 
 async function updateCountryColors() {
   try {
-      const response = await fetch('/Scripts/countryData.json'); 
+      const response = await fetch('Scripts/countryData.json'); 
       if (!response.ok) {
           throw new Error('Failed to fetch country capitals data');
       }
@@ -48,4 +48,5 @@ async function updateCountryColors() {
       console.error('Error fetching country capitals data:', error);
   }
 }
+updateCountryColors();
 // new one has hover and loads temp data at once, this one loaded countries one by one and took time

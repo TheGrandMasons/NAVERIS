@@ -176,6 +176,7 @@ section{
     }
   
     #alertBox {
+      flex-direction: column;
       display: none;
       z-index: 1;
   
