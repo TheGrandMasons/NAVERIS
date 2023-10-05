@@ -9,12 +9,20 @@ class country:
         self.plate = tectonic_plate
 
     def __str__(self):
+<<<<<<< HEAD
+        return f"Country: {self.name}\nCaptial: {self.cap}\nLongitude: {self.long}\nLatitude: {self.lat}\nWindspeed: {self.wind[0]}\nWind Direction: {self.wind[1]}\nTectonic Plate: {self.plate}"
+
+
+# Countries
+# eg = country("", "", , , 0, 0, "")
+=======
         return f"Country: {self.name}\nCapital: {self.cap}\nLatitude: {self.lat}\nLongitude: {self.long}\nWindspeed: {self.wind[0]}\nWind Direction: {self.wind[1]}\nTectonic Plate: {self.plate}"
 
 
 # Countries
 eg = country("Egypt", "Cairo", 26.820553, 30.802498, 0, 0, "Arabian")
 us = country("United States", "Washington", 37.09024, -95.712891, 0, 0, "North American")
+>>>>>>> 3ab4be66f23a0734ae766e0af8b03512c3c40eb7
 
 AD = country('Andora','Andorra la Vella',42.546245,1.601554,0,0,'African')
 AE = country('United Arab Emirates','Abu Dhabi',23.424076,53.847818,0,0,'Arabian')
@@ -262,7 +270,29 @@ ZW = country("Zimbabwe", "Harare", -19.015438, 29.154857 , 0, 0, "African")
 
 # List of countries
 countriesList = [
-    eg,
-    us
     # Add more countries here...
+   AD, AE, AF, AG, AI,
+   AL, AM, AN, AT, AU, AW,
+   AZ, BA, BB, BD, BE, BF,
+   BG, BH, BI, BJ, BM, BN,
+   BO, BR, BS, BT, BV, CL, 
+   CM, CN, CO, CR, DE, DJ, 
+   DK, DM, DO, DZ, EC, EE, 
+   EG, EH, ER, ES, ET, FI, 
+   FJ, FK, GD, GE, GF, GG, 
+   GH, GI, GL, GM, GN, GP, 
+   GQ, HN, HR, HT, HU, ID, 
+   IE, IL, KW, KY, LR, LS, 
+   LT, LU, LV, LY, MA, MC, 
+   MD, ME, MG, MH, NG, NI, 
+   NL, NO, NP, NR, NU, NZ, 
+   OM, PA, PE, PF, SC, SD, 
+   SE, SG, SH, SK, SL, SM, 
+   SN, SO, SR, ST, SV, SY, 
+   SZ, TC, TD, TF, TG, TH, 
+   TJ, TK, TL, TM, TN, TO, 
+   TR, TT, TV, TW, TZ, UA, 
+   UG, US, UY, UZ, VA, VC, 
+   VE, VG, VI, VN, VU, WF, 
+   WS, XK, YE, YT, ZA, ZM, ZW
 ]
