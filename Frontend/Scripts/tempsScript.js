@@ -87,10 +87,8 @@ async function updateCountryColors() {
   }
 }
 
-// Make sure 'capitalCity' is defined with a valid value before calling 'updateCountryColors'
-const capitalCity = 'YourCapitalCity'; // Replace 'YourCapitalCity' with an actual capital city
+const capitalCity = 'YourCapitalCity'; 
 
-// Call 'updateCountryColors' on window.onload
 window.onload = () => {
   updateCountryColors();
 };
