@@ -88,7 +88,3 @@ async function updateCountryColors() {
 }
 
 const capitalCity = 'YourCapitalCity'; 
-
-window.onload = () => {
-  updateCountryColors();
-};

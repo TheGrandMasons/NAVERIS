@@ -88,6 +88,7 @@ section {
   width: 100%;
 }
 .container #main {
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -137,14 +138,21 @@ section {
   font-size: 26px;
 }
 .container #mapSection {
+  background-image: url("Images/bg.jpg");
+  background-size: cover;
   display: none;
   background-color: rgb(0, 0, 0);
 }
 .container #mapSection .Lcontainer {
   padding-left: 5vh;
-  padding-top: 27vh;
+  padding-top: 15vh;
   display: block;
   position: relative; /* Add this */
+}
+.container #mapSection .Lcontainer h1 {
+  margin-bottom: 10vh;
+  font-family: Monolisa Book;
+  font-size: 64px;
 }
 .container #mapSection .Lcontainer .btncontainer {
   position: relative;

@@ -79,6 +79,7 @@ section{
   width: 100%;
   
   #main {
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -137,14 +138,22 @@ section{
 }
 
 #mapSection {
+  background-image: url("Images/bg.jpg");
+  background-size: cover;
   display: none;
   background-color: rgb(0, 0, 0);
 
   .Lcontainer {
     padding-left: 5vh;
-    padding-top: 27vh;
+    padding-top: 15vh;
     display: block;
     position: relative; /* Add this */
+    
+    h1{
+      margin-bottom: 10vh;
+      font-family: Monolisa Book;
+      font-size: 64px;
+    }
 
     .btncontainer{
       position: relative;
