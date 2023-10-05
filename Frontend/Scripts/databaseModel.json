@@ -2,19 +2,19 @@
     {
         "id" : "1",
         "wm" : "H",
-        "probality" : "70%",
+        "probablity" : "71",
         "cc" : "AE"
     },
     {
         "id" : "2",
         "wm" : "N",
-        "probality" : "5%",
+        "probablity" : "88",
         "cc" : "EG"
     },
     {
         "id" : "3",
         "wm" : "N",
-        "probality" : "11%",
+        "probablity" : "11",
         "cc" : "FR"
     }
 ]
