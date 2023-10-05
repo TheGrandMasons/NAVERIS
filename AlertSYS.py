@@ -2,7 +2,7 @@ import json
 from random import randint
 s = []
 count = 0
-with open("dotmatrix.json", "r") as db:
+with open("dotMatrix.json", "r") as db:
     db3 = json.load(db)
     for db2 in db3:
         count += 1 
@@ -30,5 +30,5 @@ with open("dotmatrix.json", "r") as db:
                 "pb" : f"{prb}%",
                 "cc" : "NULL"
             })
-        file = open('Backend/alert.json', 'w')
+        file = open('alert.json', 'w')
         json.dump(s,file,indent=4)
