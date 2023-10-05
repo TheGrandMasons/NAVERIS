@@ -12,7 +12,7 @@ class Dot:
         self.pressure = int(pressure)
         self.matrix = (windspeed, int(wind_direction), int(pressure))
         self.data = (id, latitude, longitude, windspeed, int(wind_direction), int(pressure))
-        self.dataForJSON = f'[\n\t"id": "{id}",\n\t"lat": "{latitude}",\n\t"lon": "{longitude}",\n\t"ws": "{round(windspeed,2)}",\n\t"wd": "{int(wind_direction)}",\n\t"ap": "{int(pressure)}"\n\t"tm": "{time}"\n]'
+        self.dataForJSON = f'[\n\t"id": "{id}",\n\t"lat": "{latitude}",\n\t"lon": "{longitude}",\n\t"ws": "{round(windspeed,2)}",\n\t"wd": "{int(wind_direction)}",\n\t"ap": "{int(pressure)}",\n\t"tm": "{time}"\n]'
         self.time = time
 
     def __str__(self):
