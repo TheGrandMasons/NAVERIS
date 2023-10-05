@@ -18,8 +18,8 @@ dots = []
 startingLatitude = float(input("Enter starting latitude: ")) * 2
 startingLongitude = float(input("Enter starting longitude: ")) * 2
 
-for lat1 in range(int(startingLatitude), int(startingLatitude) + 20): 
-    for long1 in range(int(startingLongitude), int(startingLongitude) + 20):
+for lat1 in range(int(startingLatitude), int(startingLatitude) + 5): # Width
+    for long1 in range(int(startingLongitude), int(startingLongitude) + 5): # Height
         dotID = len(dots) + 1
         # Requests Constants.
         lon = long1/2
@@ -46,5 +46,5 @@ for lat1 in range(int(startingLatitude), int(startingLatitude) + 20):
 
 # Print the dot matrix.
 # for dot in dots:
-#     if dot.id == 1:
+#     # if dot.id == 1:
 #         print(dot.matrix)

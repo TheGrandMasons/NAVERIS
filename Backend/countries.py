@@ -9,7 +9,7 @@ class country:
         self.plate = tectonic_plate
 
     def __str__(self):
-        return f"Country: {self.name}\nLongitude: {self.longitude}\nLatitude: {self.latitude}\nWindspeed: {self.windspeed}\nWind Direction: {self.wind_direction}\nTectonic Plate: {self.tectonic_plate}"
+        return f"Country: {self.name}\nCaptial: {self.cap}\nLongitude: {self.long}\nLatitude: {self.lat}\nWindspeed: {self.wind[0]}\nWind Direction: {self.wind[1]}\nTectonic Plate: {self.plate}"
 
 
 # Countries
@@ -17,7 +17,8 @@ eg = country("Egypt", "Cairo", 26.820553, 30.802498, 0, 0, "Arabian")
 
 
 # List of countries
-countriesList = {
+countriesList = [
     eg
     # Add more countries here...
-}
+]
+countriesList.sort()
