@@ -3,12 +3,11 @@ from random import randint
 s = []
 count = 0
 with open("dotmatrix.json", "r") as db:
-    fullen = len(db.readlines())
-    db3 = json.loads()
+    db3 = json.load(db)
     for db2 in db3:
         count += 1 
         if float(db2["ws"]) >= 65 and int(db2["ap"]) <= 1010 or float(db2["ws"]) >= 65:
-            prb = randint(80, 99)
+            prb = randint(99,80)
             s.append({
                 "id" : count,
                 "wm" : "D",
@@ -16,7 +15,7 @@ with open("dotmatrix.json", "r") as db:
                 "cc" : "NULL"
             })
         if float(db2["ws"]) >= 50 and int(db2["ap"]) <= 1010 or float(db2["ws"]) >= 50:
-            prb = randint(60, 30)
+            prb = randint(30,60)
             s.append({
                 "id" : count,
                 "wm" : "W",
@@ -24,9 +23,12 @@ with open("dotmatrix.json", "r") as db:
                 "cc" : "NULL"
             })
         if float(db2["ws"]) >= 40 and int(db2["ap"]) <= 1010 or float(db2["ws"]) >= 40:
+            prb = randint(0,30)
             s.append({
                 "id" : count,
                 "wm" : "N",
                 "pb" : f"{prb}%",
                 "cc" : "NULL"
             })
+        file = open('Backend/alert.json', 'w')
+        json.dump(s,file,indent=4)

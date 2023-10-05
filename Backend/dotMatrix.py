@@ -12,7 +12,7 @@ class Dot:
         self.pressure = int(pressure)
         self.matrix = (windspeed, int(wind_direction), int(pressure))
         self.data = (id, latitude, longitude, windspeed, int(wind_direction), int(pressure))
-        self.dataForJSON = f'[\n\t"id": "{id}",\n\t"lat": "{latitude}",\n\t"lon": "{longitude}",\n\t"ws": "{round(windspeed,2)}",\n\t"wd": "{int(wind_direction)}",\n\t"ap": "{int(pressure)}"\n\t"tm": "{time}"\n]'
+        self.dataForJSON = f'[\n\t"id": "{id}",\n\t"lat": "{latitude}",\n\t"lon": "{longitude}",\n\t"ws": "{round(windspeed,2)}",\n\t"wd": "{int(wind_direction)}",\n\t"ap": "{int(pressure)}",\n\t"tm": "{time}"\n]'
         self.time = time
         self.dataModel = f'{windspeed},{wind_direction},{pressure},''
 
@@ -21,7 +21,7 @@ class Dot:
 
 def Status(lat, lon):
     API_Key = "77df8ee93034bedcbe6b96b0f9eb9f0a"
-    url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API_Key}"
+    url = f"https://api./data/2.5/weather?lat={lat}&lon={lon}&appid={API_Key}"
 
     response = requests.get(url)
     res = response.json()
