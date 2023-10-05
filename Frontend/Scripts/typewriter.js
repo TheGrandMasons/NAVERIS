@@ -21,25 +21,13 @@ function typeInfo() {
     if (j < typewriteInfo.length) {
         info.innerHTML += typewriteInfo.charAt(j);
         j++;
-        setTimeout(typeInfo, 42); 
-    }
-}
-function isInfoSectionVisible() {
-    var infoSection = document.getElementById('infoSection');
-    var rect = infoSection.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.bottom <= window.innerHeight
-    );
-}
-
-function startTypingInfo() {
-    if (isInfoSectionVisible()) {
-        typeInfo();
-        window.removeEventListener('scroll', startTypingInfo); 
+        setTimeout(typeInfo, 28); 
     }
 }
 
 typeTitle();
-window.addEventListener('scroll', startTypingInfo);
+setTimeout(() => {
+    typeInfo();
+}, "1300");
+
 });
