@@ -101,6 +101,12 @@ section {
   font-size: 64px;
   color: rgb(58, 215, 64);
 }
+.container #main #info {
+  padding-left: 15%;
+  padding-right: 15%;
+  color: red;
+  font-size: 24px;
+}
 .container #main nav {
   display: flex;
   flex-direction: column;
@@ -130,36 +136,16 @@ section {
 .container #main .github-icon i {
   font-size: 26px;
 }
-.container #infoSection {
-  flex-direction: column;
-  display: none;
-  background-color: rgb(3, 1, 18);
-  align-items: center;
-  justify-content: center;
-}
-.container #infoSection p {
-  font-family: Monolisa Book;
-  text-align: center;
-  font-size: 42px;
-  color: rgb(58, 215, 64);
-}
-.container #infoSection a {
-  cursor: pointer;
-  color: red;
-  text-decoration: underline;
-  font-family: Monolisa Book;
-  font-size: 21px;
-}
 .container #mapSection {
   display: none;
   background-color: rgb(0, 0, 0);
 }
-.container #mapSection .button-container {
+.container #mapSection .Lcontainer {
   padding-left: 5vh;
   padding-top: 27vh;
   display: block;
 }
-.container #mapSection .button-container button {
+.container #mapSection .Lcontainer button {
   font-size: 21px;
   animation: fadeIn 0.69s ease-in;
   font-family: Monolisa Book;
@@ -168,21 +154,20 @@ section {
   border: none;
   background: none;
 }
-.container #mapSection .button-container button:hover {
+.container #mapSection .Lcontainer button:hover {
   color: rgb(207, 252, 149);
 }
-.container #mapSection #alertBox {
+.container #mapSection .Lcontainer #alertBox {
   flex-direction: column;
   display: none;
-  z-index: 1;
 }
-.container #mapSection #alertBox .content h1 {
+.container #mapSection .Lcontainer #alertBox .content h1 {
   color: rgb(221, 26, 26);
   font-size: 30px;
   font-family: Monolisa Book;
   padding-bottom: 10px;
 }
-.container #mapSection #alertBox .content p {
+.container #mapSection .Lcontainer #alertBox .content p {
   color: rgb(245, 190, 10);
   font-size: 18px;
   font-family: Monolisa Book;
