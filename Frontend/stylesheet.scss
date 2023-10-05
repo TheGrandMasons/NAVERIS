@@ -155,14 +155,14 @@ section{
     background-color: rgb(0, 0, 0);
   
     .button-container {
-      display: flex;
-      flex-direction: column; 
+      padding-left: 5vh;
+      padding-top: 27vh;
+      display: block;
   
       button {
         font-size: 21px;
         animation: fadeIn 0.69s ease-in;
         font-family: Monolisa Book;
-        margin-bottom: 2vh;
         cursor: pointer;
         color: rgb(220, 251, 204);
         border: none;
@@ -170,7 +170,6 @@ section{
   
         &:hover {
           color: rgb(207, 252, 149);
-          font-size: 24px;
         }
       }
     }
@@ -197,9 +196,9 @@ section{
   
     #map {
       margin-top: 6.9%;
-      margin-left: 25%;
+      margin-left: 15%;
       fill: rgb(254, 254, 254);
-      width: 60%;
+      width: 75%;
       z-index: 0;
   
       .country:hover {

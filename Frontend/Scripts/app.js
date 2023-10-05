@@ -1,3 +1,4 @@
+var mainsection = document.getElementById("main")
 var infobtn = document.getElementById("infoBtn")
 var infosection = document.getElementById("infoSection")
 var mapbtn = document.getElementById("mapBtn")
@@ -16,3 +17,4 @@ mapbtn.addEventListener('click', function() {
   mapsection.scrollIntoView({ behavior: 'smooth' }); 
   
 });
+
