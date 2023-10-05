@@ -14,7 +14,7 @@ async function fetchTemperatureData(capitalCity) {
 
 async function updateCountryColors() {
   try {
-    const response = await fetch('Scripts/countryData.json');
+    const response = await fetch('Frontend/Scripts/countryData.json'); // Check the path to your JSON file
     if (!response.ok) {
       throw new Error('Failed to fetch country capitals data');
     }
@@ -86,5 +86,11 @@ async function updateCountryColors() {
     console.error('Error fetching country capitals data:', error);
   }
 }
-window.onload= fetchTemperatureData(capitalCity);
 
+// Make sure 'capitalCity' is defined with a valid value before calling 'updateCountryColors'
+const capitalCity = 'YourCapitalCity'; // Replace 'YourCapitalCity' with an actual capital city
+
+// Call 'updateCountryColors' on window.onload
+window.onload = () => {
+  updateCountryColors();
+};
