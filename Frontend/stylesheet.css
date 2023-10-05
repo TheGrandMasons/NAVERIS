@@ -61,6 +61,17 @@
     opacity: 100%;
   }
 }
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    fill: red;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -176,15 +187,14 @@ section {
   display: none;
   position: relative;
 }
-.container #mapSection .Lcontainer #alertBox .content h1 {
+.container #mapSection .Lcontainer #alertBox h1 {
   color: rgb(221, 26, 26);
   font-size: 30px;
   font-family: Monolisa Book;
-  padding-bottom: 10px;
 }
-.container #mapSection .Lcontainer #alertBox .content p {
+.container #mapSection .Lcontainer #alertBox .alertList p {
   color: rgb(245, 190, 10);
-  font-size: 18px;
+  font-size: 16px;
   font-family: Monolisa Book;
 }
 .container #mapSection #map {
