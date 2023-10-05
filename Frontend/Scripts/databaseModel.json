@@ -1,0 +1,20 @@
+[
+    {
+        "id" : "1",
+        "wm" : "H",
+        "probality" : "70%",
+        "cc" : "AE"
+    },
+    {
+        "id" : "2",
+        "wm" : "N",
+        "probality" : "5%",
+        "cc" : "EG"
+    },
+    {
+        "id" : "3",
+        "wm" : "N",
+        "probality" : "11%",
+        "cc" : "FR"
+    }
+]
