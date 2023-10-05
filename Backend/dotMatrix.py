@@ -1,8 +1,10 @@
 import requests
 import json
+import time
+
 
 class Dot:
-    def __init__(self, id, latitude, longitude, windspeed, wind_direction, pressure):
+    def __init__(self, id, latitude, longitude, windspeed, wind_direction, pressure, time):
         self.id = id
         self.lat = latitude
         self.long = longitude
@@ -10,6 +12,8 @@ class Dot:
         self.pressure = int(pressure)
         self.matrix = (windspeed, int(wind_direction), int(pressure))
         self.data = (id, latitude, longitude, windspeed, int(wind_direction), int(pressure))
+        self.dataForJSON = f'[\n\t"id": "{id}",\n\t"lat": "{latitude}",\n\t"lon": "{longitude}",\n\t"ws": "{round(windspeed,2)}",\n\t"wd": "{int(wind_direction)}",\n\t"ap": "{int(pressure)}"\n\t"tm": "{time}"\n]'
+        self.time = time
 
     def __str__(self):
         return f"(ID: {self.id}, Latitude: {self.lat}, Longitude: {self.long}, Wind Speed: {self.wind[0]}, Wind Direction: {self.wind[1]}, Pressure: {self.pressure})"
@@ -18,8 +22,8 @@ dots = []
 startingLatitude = float(input("Enter starting latitude: ")) * 2
 startingLongitude = float(input("Enter starting longitude: ")) * 2
 
-for lat1 in range(int(startingLatitude), int(startingLatitude) + 5): # Width
-    for long1 in range(int(startingLongitude), int(startingLongitude) + 5): # Height
+for lat1 in range(int(startingLatitude), int(startingLatitude) + 20): 
+    for long1 in range(int(startingLongitude), int(startingLongitude) + 20):
         dotID = len(dots) + 1
         # Requests Constants.
         lon = long1/2
@@ -46,5 +50,5 @@ for lat1 in range(int(startingLatitude), int(startingLatitude) + 5): # Width
 
 # Print the dot matrix.
 # for dot in dots:
-#     # if dot.id == 1:
+#     if dot.id == 1:
 #         print(dot.matrix)
