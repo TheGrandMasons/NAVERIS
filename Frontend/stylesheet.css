@@ -144,8 +144,14 @@ section {
   padding-left: 5vh;
   padding-top: 27vh;
   display: block;
+  position: relative; /* Add this */
 }
-.container #mapSection .Lcontainer button {
+.container #mapSection .Lcontainer .btncontainer {
+  position: relative;
+  display: block;
+}
+.container #mapSection .Lcontainer .btncontainer button {
+  padding-right: 20px;
   font-size: 21px;
   animation: fadeIn 0.69s ease-in;
   font-family: Monolisa Book;
@@ -154,12 +160,13 @@ section {
   border: none;
   background: none;
 }
-.container #mapSection .Lcontainer button:hover {
+.container #mapSection .Lcontainer .btncontainer button:hover {
   color: rgb(207, 252, 149);
 }
 .container #mapSection .Lcontainer #alertBox {
-  flex-direction: column;
+  margin-top: 10vh;
   display: none;
+  position: relative;
 }
 .container #mapSection .Lcontainer #alertBox .content h1 {
   color: rgb(221, 26, 26);

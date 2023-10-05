@@ -136,33 +136,40 @@ section{
   }
 }
 
-  #mapSection {
-    display: none;
-    background-color: rgb(0, 0, 0);
-  
-    .Lcontainer {
-      padding-left: 5vh;
-      padding-top: 27vh;
+#mapSection {
+  display: none;
+  background-color: rgb(0, 0, 0);
+
+  .Lcontainer {
+    padding-left: 5vh;
+    padding-top: 27vh;
+    display: block;
+    position: relative; /* Add this */
+
+    .btncontainer{
+      position: relative;
       display: block;
-  
-      button {
-        font-size: 21px;
-        animation: fadeIn 0.69s ease-in;
-        font-family: Monolisa Book;
-        cursor: pointer;
-        color: rgb(220, 251, 204);
-        border: none;
-        background: none;
-  
-        &:hover {
-          color: rgb(207, 252, 149);
-        }
-      }
     
-    #alertBox {
-      flex-direction: column;
+    button {
+      padding-right:20px;
+      font-size: 21px;
+      animation: fadeIn 0.69s ease-in;
+      font-family: Monolisa Book;
+      cursor: pointer;
+      color: rgb(220, 251, 204);
+      border: none;
+      background: none;
+
+      &:hover {
+        color: rgb(207, 252, 149);
+      }
+    }
+}
+    #alertBox { 
+      margin-top: 10vh;
       display: none;
-  
+      position: relative; 
+
       .content {
         h1 {
           color: rgb(221, 26, 26);
@@ -178,27 +185,27 @@ section{
       }
     }
   }
-    #map {
-      margin-top: 6.9%;
-      margin-left: 15%;
-      fill: rgb(254, 254, 254);
-      width: 75%;
-      z-index: 0;
-  
-      .country:hover {
-        opacity: 80%;
-      }
-    }
-  
-    .tooltip {
-      font-family: Monolisa Book;
-      position: absolute;
-      background-color: rgba(0, 0, 0, 0.7);
-      color: white;
-      padding: 5px;
-      border-radius: 5px;
-      display: none;
-      z-index: 2; 
+
+  #map {
+    margin-top: 6.9%;
+    margin-left: 15%;
+    fill: rgb(254, 254, 254);
+    width: 75%;
+    z-index: 0;
+
+    .country:hover {
+      opacity: 80%;
     }
   }
-}
+
+  .tooltip {
+    font-family: Monolisa Book;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+    z-index: 2; 
+  }
+}}
