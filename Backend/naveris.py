@@ -11,3 +11,4 @@ from plotter import *
 # Range is how many (Lat or Long) lines will be passed.
 # Resolution is the distance between each dot measured in (Lat or Long).
 # makeDots(10, 10, 2, 0.2)
+drawJSON()
