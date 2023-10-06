@@ -11,7 +11,7 @@ from sklearn.preprocessing import StandardScaler
 
 
 #raed the csv dataset file
-data_frame=pd.read_csv(r'D:\My Projects\Naveris\NAVERIS\NAVERIS\AiModel\dataset\atlantic.csv')
+data_frame=pd.read_csv(r'AiModel\dataset\atlantic.csv')
 
 #Prediction Model
 x=np.array(data_frame.drop(['ID','Name','Date','Time','Event','Status','Latitude','Longitude'],axis=1))
@@ -25,7 +25,7 @@ train_model=model.fit(x_train,y_train)
 
 #[[Maximum Wind ,  Minimum Pressure ,  Low Wind NE ,   Low Wind SE ,   Low Wind SW ,   Low Wind NW ,   Moderate Wind NE,  Moderate Wind SE,  Moderate Wind SW  , Moderate Wind NW  , High Wind NE    ,  High Wind SE ,      High Wind SW   ,   High Wind NW ]]
 
- 
+
 y=model.predict([[43,1008,0,0,0,0,0,0,0,0,0,0,0,0]])
 y=y[0].replace(' ','')
 if y=='TS':
