@@ -1,4 +1,4 @@
-async function fetchTemperatureData(capitalCity) {
+async function fetchData(capitalCity) {
   const apiKey = 'ebc79dbb8dbbc5b4fc767069c24982e8';
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${capitalCity}&appid=${apiKey}&units=metric`;
 
@@ -6,8 +6,9 @@ async function fetchTemperatureData(capitalCity) {
     const response = await fetch(apiUrl);
     const data = await response.json();
     return data.main.temp;
+    return data.weather[0].description;
   } catch (error) {
-    console.error('Failed to fetch temperature data:', error);
+    console.error('Failed to fetch weather data:', error);
     return null;
   }
 }
@@ -21,13 +22,14 @@ async function updateCountryColors() {
     const countryData = await response.json();
 
     const temperaturePromises = Object.entries(countryData).map(async ([countryId, capitalCity]) => {
-      const temperature = await fetchTemperatureData(capitalCity);
-      return { countryId, temperature };
+      const temperature = await fetchData(capitalCity);
+      const description = await fetchData(capitalCity);
+      return { countryId, temperature, description};
     });
 
     const temperatureResults = await Promise.all(temperaturePromises);
 
-    temperatureResults.forEach(({ countryId, temperature }) => {
+    temperatureResults.forEach(({ countryId, temperature, description }) => {
       if (temperature !== null) {
         let fillColor;
 
@@ -65,9 +67,10 @@ async function updateCountryColors() {
     
         if (capitalCity) {
           hoverTimeout = setTimeout(async () => {
-            const temperature = await fetchTemperatureData(capitalCity);
+            const temperature = await fetchData(capitalCity);
             if (temperature !== null) {
-              tooltip.textContent = `Temperature in ${capitalCity}: ${temperature}°C`;
+              tooltip.textContent = ` in ${capitalCity} it's ${temperature}°C
+              and currently ${description}`;
               tooltip.style.left = `${e.pageX}px`;
               tooltip.style.top = `${e.pageY}px`;
               tooltip.style.display = 'block';

@@ -61,6 +61,17 @@
     opacity: 100%;
   }
 }
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    fill: red;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -173,18 +184,24 @@ section {
 }
 .container #mapSection .Lcontainer #alertBox {
   margin-top: 10vh;
-  display: none;
+  display: block;
   position: relative;
+  background: rgba(206, 213, 194, 0.2);
+  -webkit-backdrop-filter: blur(6.9px);
+          backdrop-filter: blur(6.9px);
+  border-Radius: 10px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.container #mapSection .Lcontainer #alertBox .content h1 {
+.container #mapSection .Lcontainer #alertBox h1 {
   color: rgb(221, 26, 26);
   font-size: 30px;
   font-family: Monolisa Book;
-  padding-bottom: 10px;
 }
-.container #mapSection .Lcontainer #alertBox .content p {
+.container #mapSection .Lcontainer #alertBox .alertList p {
   color: rgb(245, 190, 10);
-  font-size: 18px;
+  font-size: 16px;
   font-family: Monolisa Book;
 }
 .container #mapSection #map {

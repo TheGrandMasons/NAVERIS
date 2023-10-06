@@ -21,7 +21,7 @@ class Dot:
 
 def Status(lat, lon):
     API_Key = "77df8ee93034bedcbe6b96b0f9eb9f0a"
-    url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API_Key}"
+    url = f"https://api./data/2.5/weather?lat={lat}&lon={lon}&appid={API_Key}"
 
     response = requests.get(url)
     res = response.json()

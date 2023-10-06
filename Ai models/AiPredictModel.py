@@ -11,7 +11,7 @@ import pickle
 
 
 #raed the csv dataset file
-data_frame=pd.read_csv(r'D:\My Projects\NASA Space apps 23\Datasets\atlantic.csv')
+data_frame=pd.read_csv(r'atlantic.csv')
 
 #Prediction Model
 x=np.array(data_frame.drop(['ID','Name','Date','Time','Event','Status','Latitude','Longitude'],axis=1))

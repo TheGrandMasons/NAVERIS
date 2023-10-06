@@ -1,20 +1,17 @@
 [
     {
-        "id" : "1",
-        "wm" : "H",
-        "probablity" : "71",
+        "probability" : "71",
+        "warning": "T",
         "cc" : "AE"
     },
     {
-        "id" : "2",
-        "wm" : "N",
-        "probablity" : "88",
+        "probability" : "88",
+        "warning": "H",
         "cc" : "EG"
     },
     {
-        "id" : "3",
-        "wm" : "N",
-        "probablity" : "11",
+        "probability" : "11",
+        "warning": "H",
         "cc" : "FR"
     }
 ]
