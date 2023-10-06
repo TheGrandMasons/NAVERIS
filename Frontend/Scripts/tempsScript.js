@@ -1,5 +1,6 @@
 async function fetchData(capitalCity) {
-  const apiKey = '77df8ee93034bedcbe6b96b0f9eb9f0a';
+  const apiKey = 'ebc79dbb8dbbc5b4fc767069c24982e8';
+  ';
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${capitalCity}&appid=${apiKey}&units=metric`;
 
   try {
