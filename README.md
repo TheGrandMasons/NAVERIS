@@ -1,7 +1,8 @@
 # NAVERIS
-<h3 align="center">A project related to "Nasa Space Apps Cairo 2023" Hackthon <img src="https://png.pngtree.com/png-vector/20191113/ourmid/pngtree-winning-gold-cup-icon-flat-style-png-image_1977410.jpg" height = "25" width = "30"></img></h3>
+<h3 align="left">A project related to "Nasa Space Apps Cairo 2023" Hackthon <img src="https://png.pngtree.com/png-vector/20191113/ourmid/pngtree-winning-gold-cup-icon-flat-style-png-image_1977410.jpg" height = "25" width = "30"></img></h3>
 
 <h4>This project is fully made to work as an early warning system for natrual disasters.</h4>
+<a href="https://1drv.ms/p/s!AlyuzmZQIYJHgiW5B2xo33LxTSsD?e=jxOLkA">Our Slides</a>
 <table>
   <tr>
     <td>
@@ -35,10 +36,6 @@
     </tr>
   </tr>
 </table>
-
-test | test | test|
-:--- | :---: | ---: |
-first | Second | third
 <br>
 <h1>MAPPING WITH DOTMATRIX</h1>
 <h3>Dot Matrix Generator</h3>
