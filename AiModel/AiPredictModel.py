@@ -46,7 +46,8 @@ elif y=='WV':
     y="Tropical Wave"
 elif y=='EX':
     y="Extratropical"
-print(y)
+
+warning_disaster=y
 
 
 
