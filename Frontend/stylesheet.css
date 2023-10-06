@@ -30,17 +30,6 @@
   font-weight: normal;
   src: local("Unity Sans Semibold"), url("Fonts/Unity-Sans-SemiBold.woff2") format("woff2");
 }
-@-webkit-keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  25%, 75% {
-    transform: translateY(-3px);
-  }
-  50% {
-    transform: translateY(0);
-  }
-}
 @keyframes float {
   0%, 100% {
     transform: translateY(0);
@@ -50,26 +39,6 @@
   }
   50% {
     transform: translateY(0);
-  }
-}
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0%;
-  }
-  20% {
-    opacity: 20%;
-  }
-  40% {
-    opacity: 40%;
-  }
-  60% {
-    opacity: 60%;
-  }
-  80% {
-    opacity: 80%;
-  }
-  100% {
-    opacity: 100%;
   }
 }
 @keyframes fadeIn {
@@ -90,17 +59,6 @@
   }
   100% {
     opacity: 100%;
-  }
-}
-@-webkit-keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    fill: red;
-  }
-  100% {
-    opacity: 1;
   }
 }
 @keyframes blink {
@@ -200,7 +158,7 @@ section {
   padding-left: 5vh;
   padding-top: 15vh;
   display: block;
-  position: relative; /* Add this */
+  position: relative;
 }
 .container #mapSection .Lcontainer h1 {
   color: red;
@@ -216,8 +174,7 @@ section {
 .container #mapSection .Lcontainer .btncontainer button {
   padding-right: 20px;
   font-size: 21px;
-  -webkit-animation: fadeIn 0.69s ease-in;
-          animation: fadeIn 0.69s ease-in;
+  animation: fadeIn 0.69s ease-in;
   font-family: Monolisa Book;
   cursor: pointer;
   color: rgb(220, 251, 204);
@@ -228,7 +185,6 @@ section {
   color: rgb(207, 252, 149);
 }
 .container #mapSection .Lcontainer #alertBox {
-  margin-top: 10vh;
   display: block;
   position: relative;
   background: rgba(206, 213, 194, 0.2);
@@ -261,11 +217,11 @@ section {
 }
 .container #mapSection .tooltip {
   font-family: Monolisa Book;
-  position: relative;
+  position: absolute;
   background-color: rgba(0, 0, 0, 0.7);
-  color: white;
+  color: rgb(249, 7, 7);
   padding: 5px;
   border-radius: 5px;
   display: none;
-  z-index: 2;
+  z-index: 1;
 }/*# sourceMappingURL=stylesheet.css.map */

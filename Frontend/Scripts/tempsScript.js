@@ -42,14 +42,14 @@ async function updateCountryColors() {
           fillColor = '#6FE1E5' //cold
         }
         else if (temperature >= 15 && temperature < 18) {
-          fillColor = '#FABF48'; // cooly
+          fillColor = '#FABF48'; // cool
         } else if (temperature >= 25 && temperature < 35) {
           fillColor = '#eb9e60'; // Warm
         } else if (temperature >= 35) {
           fillColor = '#ed5d47'; // HOT
         }
         else if (temperature >= 18 && temperature < 21){
-          fillColor = '#aaf26b' // less warmer
+          fillColor = '#aaf26b' // less warm
         }
         else if (temperature >= 21){
           fillColor = '#48FA70' // warmer
@@ -70,33 +70,38 @@ async function updateCountryColors() {
     countryPaths.forEach((countryPath) => {
       let hoverTimeout;
       countryPath.addEventListener('mouseenter', async (e) => {
-        const countryId = e.target.getAttribute('id');
-        const capitalCity = countryData[countryId];
-      
+        const capitalCity = 'London'; // Replace with the actual capital city for the country
+
         if (capitalCity) {
           hoverTimeout = setTimeout(async () => {
-            const temperature = await fetchData(capitalCity);
-            const description = await fetchDescription(capitalCity); // Fetch the description separately
-            if (temperature !== null && description !== null) {
-              tooltip.textContent = `In ${capitalCity}, it's ${temperature}°C and currently ${description}`;
-              tooltip.style.left = `${e.pageX}px`;
-              tooltip.style.top = `${e.pageY}px`;
-              tooltip.style.display = 'block';
+            const apiKey = 'YOUR_API_KEY'; // Replace with your OpenWeatherMap API key
+            const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${capitalCity}&appid=${apiKey}&units=metric`;
+
+            try {
+              const response = await fetch(apiUrl);
+              const data = await response.json();
+
+              if (data.main && data.main.temp) {
+                tooltip.textContent = `Temp in ${capitalCity} is ${data.main.temp}°C`;
+                tooltip.style.left = `${e.pageX}px`;
+                tooltip.style.top = `${e.pageY}px`;
+                tooltip.style.display = 'block';
+              }
+            } catch (error) {
+              console.error('Failed to fetch weather data:', error);
             }
           }, 300);
         }
       });
-      
-    
+
       countryPath.addEventListener('mouseleave', () => {
         clearTimeout(hoverTimeout);
-    
         tooltip.style.display = 'none';
       });
     });
+    
   } catch (error) {
     console.error('Error fetching country capitals data:', error);
   }
 }
 
-const capitalCity = 'YourCapitalCity'; 
