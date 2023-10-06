@@ -161,6 +161,7 @@ section {
   position: relative; /* Add this */
 }
 .container #mapSection .Lcontainer h1 {
+  color: red;
   margin-bottom: 10vh;
   font-family: Monolisa Book;
   font-size: 64px;
@@ -216,7 +217,7 @@ section {
 }
 .container #mapSection .tooltip {
   font-family: Monolisa Book;
-  position: absolute;
+  position: relative;
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
   padding: 5px;

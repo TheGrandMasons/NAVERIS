@@ -11,7 +11,7 @@ from sklearn.preprocessing import StandardScaler
 
 
 #raed the csv dataset file
-data_frame=pd.read_csv(r'D:\My Projects\Naveris\NAVERIS\NAVERIS\AiModel\dataset\atlantic.csv')
+data_frame=pd.read_csv(r'NAVERIS\AiModel\dataset\atlantic.csv')
 
 #Prediction Model
 x=np.array(data_frame.drop(['ID','Name','Date','Time','Event','Status','Latitude','Longitude'],axis=1))

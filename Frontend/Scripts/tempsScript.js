@@ -60,17 +60,16 @@ async function updateCountryColors() {
 
     countryPaths.forEach((countryPath) => {
       let hoverTimeout;
-    
       countryPath.addEventListener('mouseenter', async (e) => {
         const countryId = e.target.getAttribute('id');
         const capitalCity = countryData[countryId];
-    
+      
         if (capitalCity) {
           hoverTimeout = setTimeout(async () => {
             const temperature = await fetchData(capitalCity);
-            if (temperature !== null) {
-              tooltip.textContent = ` in ${capitalCity} it's ${temperature}°C
-              and currently ${description}`;
+            const description = await fetchDescription(capitalCity); // Fetch the description separately
+            if (temperature !== null && description !== null) {
+              tooltip.textContent = `In ${capitalCity}, it's ${temperature}°C and currently ${description}`;
               tooltip.style.left = `${e.pageX}px`;
               tooltip.style.top = `${e.pageY}px`;
               tooltip.style.display = 'block';
@@ -78,6 +77,7 @@ async function updateCountryColors() {
           }, 300);
         }
       });
+      
     
       countryPath.addEventListener('mouseleave', () => {
         clearTimeout(hoverTimeout);
