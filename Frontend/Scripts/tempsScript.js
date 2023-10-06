@@ -1,5 +1,5 @@
 async function fetchData(capitalCity) {
-  const apiKey = 'ebc79dbb8dbbc5b4fc767069c24982e8';
+  const apiKey = '77df8ee93034bedcbe6b96b0f9eb9f0a';
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${capitalCity}&appid=${apiKey}&units=metric`;
 
   try {
@@ -34,17 +34,26 @@ async function updateCountryColors() {
         let fillColor;
 
         if (temperature < 0) {
-          fillColor = '#e9c4ff'; // Extreme cold
-        } else if (temperature < 15 && temperature >= 0) {
-          fillColor = '#5881db'; // Cold
-        } else if (temperature >= 15 && temperature < 25) {
-          fillColor = '#aaf26b'; // Normal
+          fillColor = '#EBA6FF'; // Extreme cold
+        } else if (temperature < 10 && temperature >= 0) {
+          fillColor = '#5881db'; // very cold
+        } 
+        else if (temperature <= 15){
+          fillColor = '#6FE1E5' //cold
+        }
+        else if (temperature >= 15 && temperature < 18) {
+          fillColor = '#FABF48'; // cooly
         } else if (temperature >= 25 && temperature < 35) {
           fillColor = '#eb9e60'; // Warm
         } else if (temperature >= 35) {
           fillColor = '#ed5d47'; // HOT
         }
-
+        else if (temperature >= 18 && temperature < 21){
+          fillColor = '#aaf26b' // less warmer
+        }
+        else if (temperature >= 21){
+          fillColor = '#48FA70' // warmer
+        }
         const country = document.getElementById(countryId);
         if (country) {
           country.style.fill = fillColor;
