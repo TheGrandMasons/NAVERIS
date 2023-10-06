@@ -1,6 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
   const alertBtn = document.getElementById('alertbtn');
-  const alertBox = document.getElementById('alertBox');
+  const alertBox = document.getElementById('alertBox'); 
+  let isAlertBoxVisible= true;
+
+  alertBtn.addEventListener('click', function () {
+    if (alertBox.style.display === 'none' || alertBox.style.display === '' || isAlertBoxVisible=== 'false') {
+      alertBox.style.display = 'block';
+      isAlertBoxVisible = true;
+    } else {
+      alertBox.style.display = 'none'; 
+      isAlertBoxVisible = false;
+
+    }
+});
   
   async function fetchAlerts() {
     try {
@@ -28,23 +40,23 @@ document.addEventListener('DOMContentLoaded', function () {
           warningElement.classList.add('warning');
           warningElement.textContent = `Warning for ${cc}: ${warningType} with ${probability}% Probability`;
           alertList.appendChild(warningElement);
-
-          let fillColor = '#f11111';
           const country = document.getElementById(cc);
-          if (country) {
-            country.style.animation= 'blink 0.4s infinite';
-          }
+          if (country){
+          if (isAlertBoxVisible) {
+            country.style.animation = 'blink 0.4s infinite';
+          } else {
+            country.style.animation = 'none'; 
         }
+      }
+    }
       });
     } catch (error) {
       console.error('Error fetching warnings', error);
     }
   }
+  fetchAlerts();
 
-  alertBtn.addEventListener('click', fetchAlerts);
-
-
-  alertBtn.addEventListener('click', function () {
+ /*alertBtn.addEventListener('click', function () {
     if (alertBox.style.display === 'none' || alertBox.style.display === '') {
       alertBox.style.display = 'block';
       alertBox.style.background = 'rgba(206, 213, 194, 0.2)';
@@ -56,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     } else {
       alertBox.style.display = 'none';
-    } 
+    }}); */
 
-  });
+
 });
