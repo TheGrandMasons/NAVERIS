@@ -158,12 +158,14 @@ section {
   padding-left: 5vh;
   padding-top: 15vh;
   display: block;
-  position: relative; /* Add this */
+  position: relative;
 }
 .container #mapSection .Lcontainer h1 {
+  color: red;
   margin-bottom: 10vh;
   font-family: Monolisa Book;
   font-size: 64px;
+  color: white;
 }
 .container #mapSection .Lcontainer .btncontainer {
   position: relative;
@@ -183,9 +185,8 @@ section {
   color: rgb(207, 252, 149);
 }
 .container #mapSection .Lcontainer #alertBox {
-  margin-top: 10vh;
+  margin-top: 35px;
   display: block;
-  position: relative;
   background: rgba(206, 213, 194, 0.2);
   -webkit-backdrop-filter: blur(6.9px);
           backdrop-filter: blur(6.9px);
@@ -195,6 +196,7 @@ section {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .container #mapSection .Lcontainer #alertBox h1 {
+  margin-bottom: 15px;
   color: rgb(221, 26, 26);
   font-size: 30px;
   font-family: Monolisa Book;
@@ -218,9 +220,9 @@ section {
   font-family: Monolisa Book;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.7);
-  color: white;
+  color: rgb(249, 7, 7);
   padding: 5px;
   border-radius: 5px;
   display: none;
-  z-index: 2;
+  z-index: 1;
 }/*# sourceMappingURL=stylesheet.css.map */

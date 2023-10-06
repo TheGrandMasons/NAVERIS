@@ -31,14 +31,16 @@ document.addEventListener('DOMContentLoaded', function () {
         let warningType;
         if (warning === "H"){
           warningType = 'Hurricane'
+        }else if(warning ==="TS"){
+          warningType = 'Tropical Storm'
         }else if(warning ==="T"){
           warningType = 'Tornado'
         }
 
-        if (probability >= 70 ) {
+        if (probability >= 60 ) {
           const warningElement = document.createElement('p');
           warningElement.classList.add('warning');
-          warningElement.textContent = `Warning for ${cc}: ${warningType} with ${probability}% Probability`;
+          warningElement.textContent = `o Warning for ${cc}: ${warningType} with ${probability}% Probability`;
           alertList.appendChild(warningElement);
           const country = document.getElementById(cc);
           if (country){
