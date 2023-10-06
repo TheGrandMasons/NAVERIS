@@ -11,7 +11,7 @@ import pickle
 
 
 #raed the csv dataset file
-data_frame=pd.read_csv(r'atlantic.csv')
+data_frame=pd.read_csv(r'Ai models/dataset/atlantic.csv')
 
 #Prediction Model
 x=np.array(data_frame.drop(['ID','Name','Date','Time','Event','Status','Latitude','Longitude'],axis=1))
@@ -27,8 +27,8 @@ train_model=model.fit(x_train,y_train)
 
 with open('training_model.pickle', 'wb') as file:
     pickle.dump(train_model, file)
-
-y=model.predict([[30,1008,0,0,0,0,0,0,0,0,0,0,0,0]])
+ 
+y=model.predict([[43,1008,0,0,0,0,0,0,0,0,0,0,0,0]])
 
 if y=='TS':
     y='Tropical Storm'
