@@ -8,7 +8,6 @@ from sklearn.model_selection import KFold,cross_val_score
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 import pickle
-import time
 
 
 #raed the csv dataset file
@@ -24,11 +23,7 @@ model=RandomForestClassifier(random_state=42)
 
 train_model=model.fit(x_train,y_train)
 
-
-
 #[[Maximum Wind ,  Minimum Pressure ,  Low Wind NE ,   Low Wind SE ,   Low Wind SW ,   Low Wind NW ,   Moderate Wind NE,  Moderate Wind SE,  Moderate Wind SW  , Moderate Wind NW  , High Wind NE    ,  High Wind SE ,      High Wind SW   ,   High Wind NW ]]
-# pickle.dump(train_model,open('D:\My Projects\Naveris\NAVERIS\Ai models\aimodel.pkl','wb'))
-
 
 with open('training_model.pickle', 'wb') as file:
     pickle.dump(train_model, file)
